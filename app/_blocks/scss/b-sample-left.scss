@@ -1,0 +1,72 @@
+.b-sample-left {  
+  margin-bottom: 40px;
+
+  @media all and (max-width:$breakpoint2) {
+    margin-bottom: 20px;
+    background-color: $background-light-2;
+  } 
+
+  .container {
+    @media all and (max-width:$breakpoint2) {
+      background-color: $background-light-2;
+    }
+  }
+
+  &__container {
+    padding: 50px 49px 50px 48px;
+    column-count: 2;
+    background-color: $background-light-2;
+
+    @media all and (max-width:$breakpoint2) {
+      column-count: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media all and (max-width:$breakpoint3) {
+      padding: 42px 0 15px 0;
+    }
+  }
+
+  &__img {
+    margin-bottom: 180px;
+    margin-right: 112px;
+
+    picture img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+
+    @media all and (max-width:$breakpoint2) {
+        flex-direction: column;
+        margin-right: 0;
+        margin-bottom: 36px;
+        order: 20;
+    }
+  }
+
+  &__title {
+    @media all and (max-width:$breakpoint2) {
+      order: 10;
+    }
+  }
+
+  &__text {
+    margin-bottom: 57px;
+
+    @media all and (max-width:$breakpoint2) {
+      order: 30;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__button {
+    @media all and (max-width:$breakpoint2) {
+      order: 40;
+      max-width: 150px;
+    }
+  }
+
+}

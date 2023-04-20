@@ -1,0 +1,21 @@
+doctype html
+html(lang="ru")
+	head
+		include head
+		//-script(src="js/bundle/index.js" type="text/javascript")
+
+		title
+			block title
+		block head
+	body
+		.wrapper.index-page
+			.wrapper__box
+				include /_template/pug/header
+				main.main-content
+					include /_template/pug/breadcrumbs
+					block content
+
+				include /_template/pug/footer
+				
+		//-include /_template/pug/mobile-menu
+		//-include /_template/pug/popup

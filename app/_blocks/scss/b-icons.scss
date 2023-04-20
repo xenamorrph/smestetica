@@ -1,0 +1,65 @@
+.b-icons {
+  margin-bottom: 69px;
+
+   @media all and (max-width:$breakpoint4) {
+    margin-bottom: 45px;
+  } 
+
+  &__inner {
+    margin-bottom: 39px;  
+    
+    @media all and (max-width:$breakpoint4) {
+      margin-bottom: 25px;
+    } 
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px;
+
+    @media all and (max-width:$breakpoint4) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+    } 
+
+    @media all and (max-width:$breakpoint5) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    } 
+  }
+
+  &__item {
+    padding: 20px 20px 24px 20px;
+    background-color: $background-light-1;
+  }
+
+  &__icon {
+    width: 60px; 
+    height: 60px;
+    background: linear-gradient(90deg, #B77F41 0%, #B57D3F 2.96%, #CB9A57 8.95%, #DDB269 15.08%, #E9C175 21.38%, #EEC87A 28.09%, #9B6737 66.85%, #A8824C 100%);
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 32px;
+
+    picture img {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 180%;
+      bottom: -20px;
+      border-bottom: 4px solid $ligth-brown;
+      border-radius: 10px;
+    }
+    
+  }
+
+
+}

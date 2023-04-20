@@ -1,0 +1,44 @@
+.b-example {
+  background: $background-light-1;
+
+  &__background {
+
+    .b-example__left {
+      top: 159px;
+      left: -20px;
+    }
+
+    .b-example__right {
+      top: 46px;
+      right: -95px;
+    } 
+  }
+  
+  &__container {
+    padding: 84px 0 52px 0;
+
+    @media all and (max-width:$breakpoint4) {
+      padding: 45px 0 19px 0;
+    } 
+  }
+
+  &__subtitle {
+    color: $gray-brown2;
+    font-family: 'Open Sans', "Arial", sans-serif;
+  }
+
+  &__text {
+    margin-bottom: 60px;
+
+    @media all and (max-width:$breakpoint4) {
+      margin-bottom: 20px;
+    } 
+    
+    p {
+      margin-bottom: 0;
+    }
+    span {
+      color: $ligth-brown;
+    }
+  }
+}

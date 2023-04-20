@@ -1,0 +1,93 @@
+.b-tile-middle {
+  margin-bottom: 68px;
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 54px;
+    row-gap: 24px;
+
+    @media all and (max-width:$breakpoint2) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    } 
+  }
+
+  &__item {
+    padding: 20px 78px 20px 25px;
+    display: flex;
+    text-decoration: none;
+    background-color: $background-light-2;
+    position: relative;
+
+    
+    @media all and (max-width:$breakpoint5) {
+      flex-direction: column;
+      padding: 20px 34px 20px 22px;
+    } 
+
+    &:hover {
+      &::after {
+        border: 14px solid transparent; 
+        border-left: 28px solid $ligth-brown;
+      }
+    }
+
+    &::after {
+      content: " ";
+      position: absolute; 
+      border: 14px solid transparent; 
+      border-left: 28px solid $gray-brown;
+      right: 30px;
+      top: 30%;
+
+      @media all and (max-width:$breakpoint3) {
+        right: 10px;
+      } 
+
+      @media all and (max-width:$breakpoint5) {
+        border: 8px solid transparent; 
+        border-left: 17px solid $gray-brown;
+        top: 75%;
+      } 
+    }
+  }
+
+  &__img {
+    margin-right: 29px;
+
+    @media all and (max-width:$breakpoint5) {
+      margin: 0;
+    } 
+    
+    picture img {
+      object-fit: cover;
+      @media all and (max-width:$breakpoint5) {
+        width: 100px;
+        height: 100px;
+      } 
+    }
+  }
+
+  &__text {
+    margin-top: 11px;
+    margin-right: 10px;
+    
+
+    span {
+      font-family: 'El Messiri';
+      font-size: 30px;
+      line-height: 35px;
+      color: $gray-brown;
+
+      &:hover {
+        color: $ligth-brown;
+      }
+
+      @media all and (max-width:$breakpoint5) {
+        font-size: 18px;
+        line-height: inherit;
+      } 
+    }
+  }
+}

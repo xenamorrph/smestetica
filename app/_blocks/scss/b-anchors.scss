@@ -1,0 +1,126 @@
+@import "_variables";
+
+
+.b-anchors {
+  background: $background-light-1;
+  min-height: 130px;
+  margin-bottom: 42px;
+  padding-top: 72px;
+
+  @media all and (max-width:$breakpoint5) {
+    margin-bottom: 19px;
+    padding-top: 66px;
+  }
+ 
+}
+
+.b-anchors__nav {
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    border: 6px solid transparent; 
+    border-bottom: 12px solid $ligth-brown;
+    right: 36px;
+    top: 16px;
+    transform: rotate(180deg);
+    display: none;
+
+    @media all and (max-width:$breakpoint5) {
+      display: block;
+    }
+  }
+
+  .b-anchors__button {
+    width: 100%;
+    padding-left: 54px;
+    padding-right: 60px;
+    font-size: 16px;
+    background-color: inherit;
+    color: $dark-brown;
+    border: none;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    min-height: 44px;
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: calc(50% - 8px);
+      left: 12px;
+      width: 21px;
+      height: 3px;
+      border-radius: 10px;
+      background-color: $ligth-brown;
+      box-shadow: 0 7px 0 0 $ligth-brown, 0 14px 0 0 $ligth-brown;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      border: 4px solid $ligth-brown;
+    }
+
+    @media all and (max-width:$breakpoint5) {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    width: 100%;
+    
+    @media all and (max-width:$breakpoint5) {
+      flex-direction: column;
+      display: none;
+    }
+  }
+
+  
+
+  ul li {
+    // Переопределение стилей класса .text
+    margin: 0;
+
+    @media all and (max-width:$breakpoint5) {
+      padding: 0;
+    }
+
+    &:before {
+      content: none;
+    }
+  }
+
+  ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 17px 28px;
+
+    @media all and (max-width:$breakpoint5){
+      display: block;
+      width: 100%;
+      padding: 10px 21px;
+      text-align: center;
+    }
+
+    &:hover {
+      background: $ligth-brown;
+      color: white;
+    }
+  }
+}
+
+ul.js-nav-toggle {
+  display: block;
+}

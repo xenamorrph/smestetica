@@ -1,0 +1,86 @@
+.b-clinics {
+  margin-bottom: 87px;
+  
+  &__list {
+    display: flex;
+    gap: 40px;
+
+    @media all and (max-width:$breakpoint2) {
+      gap: 20px;
+    } 
+    
+    @media all and (max-width:$breakpoint4) {
+      flex-direction: column; 
+      gap: 10px;
+    } 
+  }
+
+  &__item {
+    display: flex;
+    padding: 28px 32px;
+    flex-grow: 1;
+    color: white;
+    font-size: 20px;
+    background-color: $ligth-brown;
+    
+    &:nth-of-type(1) {
+      background: linear-gradient(252.32deg, #D1A677 15.35%, #956530 56.8%), #B3834E;
+    }
+
+    &:nth-of-type(2) {
+      @media all and (max-width:$breakpoint5) {
+        background: linear-gradient(252.32deg, #D1A677 15.35%, #956530 56.8%), #B3834E;
+      } 
+      
+    }
+
+
+    @media all and (max-width:$breakpoint3) {
+      flex-direction: column;
+      padding: 20px 17px;
+    } 
+  }
+
+  &__icon {
+    margin-right: 30px;
+    width: 44px;
+    height: 57.44px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI1OCIgZmlsbD0ibm9uZSI+PGcgZmlsbD0iI0U1QzI4RSIgY2xpcC1wYXRoPSJ1cmwoI2EpIj48cGF0aCBkPSJtMjEuNyAwIDMgLjZhMjAuMyAyMC4zIDAgMCAxIDE1IDE2QTI0IDI0IDAgMCAxIDM4LjMgMjlhNTggNTggMCAwIDEtNi41IDEyLjZsLTkgMTMuMS0xIDEuNS0xLjMgMS4yaC0xbC0xLjItMS4yLTkuNS0xMy44QTYzIDYzIDAgMCAxIDIgMjkuN2EyNSAyNSAwIDAgMS0yLTEwQy4yIDE0IDIuNSA5IDYuOCA1LjFBMTkuMyAxOS4zIDAgMCAxIDE4LjMgMGgzLjRaTTIwIDUyLjdsLjItLjNjMi44LTQgNS43LTggOC40LTEyLjEgMi42LTQgNS04IDYuNi0xMi41IDEuMi0zLjUgMS45LTcgMS4yLTEwLjdBMTYuNyAxNi43IDAgMCAwIDE2LjYgMy43IDE3IDE3IDAgMCAwIDMuNyAyMy44Yy43IDMuNSAyIDYuNyAzLjcgOS43IDIuNCA0LjcgNS40IDkgOC40IDEzLjJsNC4yIDZaIi8+PHBhdGggZD0iTTIwIDEwLjFhMTAgMTAgMCAwIDEgMTAgMTAuMSAxMCAxMCAwIDAgMS0xMCAxMCAxMCAxMCAwIDAgMS0xMC0xMEExMCAxMCAwIDAgMSAyMCAxMFptLTYuNyAxMGMwIDMuNyAzIDYuOCA2LjYgNi44YTYuNyA2LjcgMCAwIDAgLjEtMTMuNGMtMy42IDAtNi42IDMtNi43IDYuN1oiLz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDQwdjU3LjRIMHoiLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=") 50% 50% no-repeat;
+   
+    @media all and (max-width:$breakpoint3) {
+      margin-bottom: 25px; 
+    } 
+
+     @media all and (max-width:$breakpoint5) {
+      width: 24px;
+      height: 34px;
+      background-size: 100%;
+    } 
+  }
+
+  &__title {
+    font-family: 'El Messiri';
+    font-size: 26px;
+    margin-bottom: 20px; 
+
+    @media all and (max-width:$breakpoint3) {
+      margin-bottom: 14px; 
+    } 
+  }
+
+  &__text span:nth-of-type(1) {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+
+    @media all and (max-width:$breakpoint5) {
+      font-size: 16px;
+    } 
+  }
+
+  &__text span:nth-of-type(2) {
+    @media all and (max-width:$breakpoint5) {
+      font-size: 12px;
+    } 
+  }
+}

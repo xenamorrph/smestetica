@@ -1,0 +1,261 @@
+@import "variables";
+
+
+.anchor {
+  position: relative;
+  display: block;
+  width:100%;
+  height:0;
+  top: -170px;
+  visibility: hidden;
+}
+
+.b-title > h1,
+.b-title > h2,
+.b-title > h3,
+.b-title > h4 {
+	font-family:'El Messiri';
+	color: $dark-brown;
+	margin: 0 0 17px;	
+	line-height: 1.2;
+	
+	@media all and (max-width:$breakpoint4) {
+		margin: 0 0 14px;
+		line-height: 1	;
+	} 
+}
+
+.b-subtitle {
+	text-transform: uppercase;
+	font-family:'El Messiri';
+	color: $dark-brown;
+  padding-bottom: 20px;
+	
+	@media all and (max-width:$breakpoint4) {
+		padding-bottom: 15px;
+	} 
+}
+
+.b-title-border {
+  border-bottom: 4px solid $ligth-brown;
+  margin-bottom: 30px;
+
+	@media all and (max-width:$breakpoint4) {
+		margin-bottom: 20px;
+	} 
+}
+
+// Кнопка 
+
+.light-brown-button {
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+	padding: 12px 40px 12px 40px;
+	background: $ligth-brown;
+	&:hover {
+		background: $dark-brown;
+	}
+}
+
+// Кнопки переключения 
+
+.b-arrows-button {
+	width: 60px;
+	height: 60px;
+	position: relative;
+	border: none;
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 14px 22px;
+
+	@media all and (max-width:  $breakpoint3) {
+		width: 48px;
+		height: 48px;
+	}
+
+	&:hover {
+		background-color: $ligth-brown;
+	}
+
+	&:hover.b-arrows-button--prev::after, 
+	&:hover.b-arrows-button--next::before {
+		border-top: 3px solid #FFFFFF;
+		border-right: 3px solid #FFFFFF;
+	}
+
+	&--prev::after,
+	&--next::before {
+		content: "";
+		position: absolute;
+		top: 13px;
+		width: 31px;
+		height: 31px;
+		border-top: 3px solid $ligth-brown;
+		border-right: 3px solid $ligth-brown;
+		margin-right: 31px;
+		
+		@media all and (max-width:  $breakpoint3) {
+			top: 10px;
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+	&--prev::after {
+		transform: rotate(-135deg);
+		left: 23px;
+		
+		@media all and (max-width: $breakpoint3) {
+			left: 17px;
+		}
+	}	
+	
+	&--next::before {
+		transform: rotate(45deg);
+		left: 5px;
+	}	
+
+}
+
+// Фон с цветами
+.flowers {
+	background: linear-gradient(252.32deg, #D1A677 15.35%, #956530 56.8%), #B3834E;
+	position: relative;
+
+	&__background {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		top: 0;
+	}
+
+	&__left {
+		width: 272px;
+		height: 291px;
+		position: relative;
+
+		picture img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__right {
+		height: 727px;
+		width: 377px;
+		position: relative;
+
+		picture img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@media all and (max-width: 1560px) {
+
+		&__left, 
+		&__right {
+			display: none;
+		}
+	}
+}
+
+
+
+:focus, 
+input, 
+img {
+	outline:none;
+}
+
+a img {
+	border:none;
+}
+
+strong {
+	font-weight: bold;
+}
+
+p {
+	margin: 18px 0;
+
+	&:empty {
+		display:none;
+	}
+}
+
+textarea,
+select,
+input[type=text] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+button {
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	color: $clr1;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+html,
+body {
+	font-size: 16px;
+	line-height: 150%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color:#232323;
+	height: 100%;
+	min-width: 320px!important;
+	background: #fff;
+
+	@media all and (max-width:$breakpoint4) {
+		font-size: 14px;
+	}
+}
+
+.container {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 15px;
+
+	@media all and (max-width:$breakpoint4){
+		padding:0 10px;
+	}
+}
+
+.wrapper {
+	$s: &;
+	box-sizing: border-box;
+	transition: 0.2s;
+	height: 100%;
+
+	&__box{
+		min-height: 100%;
+		overflow: hidden;
+		padding: 150px 0 0;
+	}
+
+	@media all and (max-width:$breakpoint3) {
+		&__box {
+			padding: 60px 0 0;
+		}
+	}
+}
+
+.main-content {
+	padding: 0 0 40px;
+}
+

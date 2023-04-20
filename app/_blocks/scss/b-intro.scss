@@ -1,0 +1,246 @@
+@import "_variables";
+
+.b-intro {
+  margin-top: 105px;
+  color: white;
+
+  &__background { 
+    .b-intro__left {
+      width: 434px;
+      height: 462px;
+      top: 57px;
+      right: 160px;
+    }
+    .b-intro__right {
+      top: -81px;
+      right: -31px;
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__inner {
+    display: flex;
+    
+    @media all and (max-width:$breakpoint3){
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  
+  &__text {
+    max-width: 66%;
+
+    @media all and (max-width:$breakpoint3) {
+      max-width: 100%;
+    }
+
+    .b-intro__subtitle {
+      line-height: 22px;
+      text-transform: uppercase;
+      margin-top: 37px;
+      margin-bottom: 30px;
+      
+      @media all and (max-width:$breakpoint5) {
+        margin-top: 27px;
+      }
+    }
+
+    ul {
+      margin: 0;
+  
+      li:last-of-type {
+        text-transform: uppercase;
+      }
+      
+      li {
+        padding: 0;
+        margin-left: 39px;
+        position: relative;
+
+        @media all and (max-width:$breakpoint3) {
+          margin-bottom: 23px;
+
+          &:nth-last-of-type(1) {
+            margin-bottom: 0;
+          }
+        }
+  
+        &::before {
+          content: "";
+          width: 28px;
+          height: 28px;
+          position: absolute;
+          left: -39px;
+          top: 0;
+          background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yOCAyLjAxODgxTDguNzIxOTUgMjhMMCAxOS42MDM4TDIuNTUxMjggMTcuMTQ3OEw4LjI2MTU0IDIyLjY0NDhMMjUuMDY0IDBMMjggMi4wMTg4MVoiIGZpbGw9IiNEOUI3ODUiLz4KPC9zdmc+Cg==") 50% 50% no-repeat;
+        }
+      }
+    }
+  }
+
+  &__img {
+    
+  @media all and (max-width:$breakpoint3) {
+    align-self: center;
+    position: relative;
+    top: 47px;
+  }
+
+  picture img {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    right: -72px;
+    bottom: 0;
+
+    @media all and (max-width:$breakpoint3) {
+      position: static;
+    }
+
+    @media all and (max-width:$breakpoint5) {
+      display: block;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+  
+  &__form {
+    padding: 20px 52px 20px 50px;
+    background-color: white;
+    color: $dark-brown;
+    max-width: 65%;
+    margin-right: auto;
+    position: relative;
+    top: 40px;
+    box-shadow: $shadow2;
+
+    @media all and (max-width:$breakpoint2) {
+      padding: 19px 11px;
+    }
+
+    @media all and (max-width:$breakpoint3) {
+      max-width: 100%;
+    }
+
+  }
+  
+  &__box {
+    display: flex;
+
+    @media all and (max-width:$breakpoint5) {
+      flex-direction: column;
+    }
+  }
+
+  &__name,
+  &__tel,
+  &__submit,
+  &__agreement {
+    width: 50%;
+
+    @media all and (max-width:$breakpoint5) {
+      width: 100%;
+    }
+  }
+
+  &__name,
+  &__agreement {
+    margin-right: 50px;
+
+    @media all and (max-width:$breakpoint2) {
+    margin-right: 20px;
+    }
+    @media all and (max-width:$breakpoint5) {
+      margin-right: 0;
+    }
+  }
+
+  &__name input, 
+  &__tel input {
+    padding: 12px 19px;
+    border: none;
+    background-color: rgba(150, 102, 49, 0.1);
+    line-height: 22px;
+    width: 100%;
+    margin-bottom: 17px;
+    color: $dark-brown;
+  }
+
+  &__name input::placeholder, 
+  &__tel input::placeholder {
+    color: $dark-brown;
+  }
+
+  &__agreement {
+    font-size: 12px;
+    line-height: 18px;
+    color: black;
+    a {
+      color: inherit;
+    }
+
+    @media all and (max-width:$breakpoint5) {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @media all and (max-width:$breakpoint4) {
+      font-size: 16px;
+    }
+
+    button {
+      background: linear-gradient(252.32deg, #D1A677 15.35%, #956530 56.8%), #B3834E;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 14px 0px 19px 30px;
+      text-align: start;
+      width: 100%;
+
+      &:hover::after {
+        transition: all 0.4s ease-in-out;
+        transform: scale(1.5);
+      }
+
+      &::after {
+        content: " ";
+        position: absolute; 
+        border: 9px solid transparent; border-left: 18px solid white;
+        right: 26px;
+        top: 24px;
+
+       
+
+        @media all and (max-width:$breakpoint4) {
+          content: none;
+        }
+      }
+
+      &:hover {
+        background: linear-gradient(252.32deg, $ligth-brown 15.35%, $dark-brown  56.8%), #B3834E;
+      }
+
+      span:nth-of-type(1) {
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      span:nth-of-type(2) {
+        color: #D2A778;
+        display: block;
+      }
+    }
+  }
+}
+

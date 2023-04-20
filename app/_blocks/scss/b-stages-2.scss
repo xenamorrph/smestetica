@@ -1,0 +1,91 @@
+@import "_variables";
+
+.b-stages-2 {
+  margin-bottom: 56px;
+  
+  &__container > p:nth-of-type(1) {
+    margin-bottom: 48px;
+
+    @media all and (max-width:$breakpoint5) {
+      margin-bottom: 34px;
+    } 
+  }
+
+  &__subtitle {
+    color: $gray-brown2;
+    font-family: 'Open Sans', "Arial", sans-serif;
+  }
+
+  &__list {
+    counter-reset: section;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 65px;
+    margin-bottom: 31px;
+
+    @media all and (max-width:$breakpoint4) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+    } 
+
+    @media all and (max-width:$breakpoint5) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    } 
+  }
+
+  &__item {
+    padding: 20px 60px 20px 20px;
+    background-color: $background-light-1;
+    display: flex;
+
+    @media all and (max-width:$breakpoint3) {
+      padding: 20px;
+      flex-direction: column;
+    } 
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__count {
+    position: relative;
+    width: 80px; 
+    height: 80px;
+    background-color: $background-light-3;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 46px;
+
+     @media all and (max-width:$breakpoint3) {
+      margin-bottom: 32px;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 180%;
+        bottom: -20px;
+        border-bottom: 4px solid $ligth-brown;
+        border-radius: 10px;
+      }
+    }
+
+    &::before {
+      font-size: 61px;
+      font-family:'El Messiri';
+      color: $dark-brown;
+      counter-increment: section;
+      content: counter(section) "";
+      position: absolute;
+      top: 34px;
+      left: 24px;
+
+      @media all and (max-width:$breakpoint3) {
+        color: $ligth-brown;
+      }
+      
+    }
+  }
+}

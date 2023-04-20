@@ -1,0 +1,141 @@
+@import "_variables";
+.b-expert {
+  padding-bottom: 30px;
+
+  @media all and (max-width:$breakpoint3) {
+    padding-bottom: 0;
+  }  
+
+  &__left {
+    top: 169px;
+    left: -13px;
+  }
+
+  &__right {
+    right: -30px;
+    top: 96px;
+  }
+
+  &__container {
+    padding-top: 41px;
+    display: flex;
+    color: white;
+
+    @media all and (max-width:$breakpoint3) {
+      flex-direction: column;
+      padding-top: 21px;
+    }  
+  }
+
+  &__article {
+    position: relative;
+    z-index: 20;
+    max-width: 63.5%;
+
+    @media all and (max-width:$breakpoint3) {
+      max-width: 100%;
+    }  
+
+    .b-expert__title > h1, 
+    .b-expert__title > h2, 
+    .b-expert__title > h3, 
+    .b-expert__title > h4 {
+      color: white;
+      margin-bottom: 20px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+      @media all and (max-width:$breakpoint5) {
+        padding-left: 15px;
+        line-height: 22px;
+        text-shadow: none;
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    background-color: white;
+    padding: 28px 19px 48px 33px;
+    color: black;
+    line-height: 22px;
+
+    @media all and (max-width:$breakpoint5) {
+      padding: 26px 26px 19px 27px;
+      margin-bottom: 24px;
+    } 
+
+    &::after {
+      content: "";
+      position: absolute;
+      border: 15px solid transparent;
+      border-left: 30px solid white;
+      right: -45px;
+      top: 104px;
+
+      @media all and (max-width:$breakpoint3) {
+        transform: rotate(82deg);
+        right: auto;
+        top: auto;
+        bottom: -34px;
+        left: 10%;
+      }
+    }
+  }
+
+  &__doctor {
+    z-index: 10;
+    transform: translate(-40px, 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    @media all and (max-width:$breakpoint3) {
+      transform: none; 
+      max-width: 100%;
+    }  
+  }
+
+  &__photo {
+    margin: 0 auto;
+    flex-shrink: 0;
+
+    picture {
+      height: 100%;
+      display: flex;
+    }
+    
+    picture img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__post {
+    background-color: $dark-brown;
+    padding: 25px 20px 25px 70px;
+    display: flex;
+    flex-direction: column;
+    width: 110%;
+
+    @media all and (max-width:$breakpoint3) {
+      padding: 25px 15px;
+      align-items: center;
+      transform: translate(-15px, 0);
+    }  
+
+    @media all and (max-width:$breakpoint5) {
+      align-items: flex-start;
+      padding: 25px 36px;
+    }  
+
+    span:nth-of-type(1) {
+      display: block;
+      font-size: 20px;
+      line-height: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+  }
+}

@@ -1,0 +1,68 @@
+@import "_variables";
+
+.b-stages {
+  margin-bottom: 56px;
+  
+  &__list {
+    counter-reset: section;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px 65px;
+
+    @media all and (max-width:$breakpoint2) {
+      gap: 10px 45px;
+    } 
+
+    @media all and (max-width:$breakpoint3) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px 45px;
+    } 
+
+    @media all and (max-width:$breakpoint5) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    } 
+  }
+
+  &__item {
+    padding: 20px;
+    background-color: $background-light-2;
+  }
+
+  &__count {
+    position: relative;
+    width: 80px; 
+    height: 80px;
+    background-color: $background-light-3;
+    border-radius: 50%;
+    margin-bottom: 34px;
+
+    @media all and (max-width:$breakpoint5) {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 180%;
+        bottom: -20px;
+        border-bottom: 4px solid $ligth-brown;
+        border-radius: 10px;
+      }
+    } 
+
+    &::before {
+      font-size: 61px;
+      font-family:'El Messiri';
+      color: $dark-brown;
+      counter-increment: section;
+      content: counter(section) "";
+      position: absolute;
+      top: 34px;
+      left: 24px;
+
+      @media all and (max-width:$breakpoint5) {
+        color: $ligth-brown;
+      }
+    }
+  }
+}

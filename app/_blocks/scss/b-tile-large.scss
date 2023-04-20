@@ -1,0 +1,110 @@
+@import "_variables";
+
+.b-tile-large {
+  margin-bottom: 56px;
+  
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 49px;
+    row-gap: 20px;
+
+    @media all and (max-width:$breakpoint4) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    } 
+  }
+
+  &__item {
+    background-color: $background-light-2;
+    text-decoration: none;
+
+    &:hover .b-tile-large__img::after {
+      opacity: 0;
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    &::after {
+      content: "";
+      background: linear-gradient(180deg, rgba(183, 127, 65, 0.3) 0%, rgba(167, 115, 64, 0.54) 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: .2s;
+      opacity: 1;
+    }
+
+    picture img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    padding: 31px 99px 18px 51px;
+    position: relative;
+
+    @media all and (max-width:$breakpoint3) {
+      padding: 20px 65px 20px 20px;
+    } 
+
+    @media all and (max-width:$breakpoint4) {
+      padding: 13px 55px 13px 13px;
+    } 
+
+    span {
+      display: block;
+      font-family: 'El Messiri';
+      font-size: 30px;
+      line-height: 35px;
+      color: $gray-brown;
+      text-decoration: none;
+      margin-bottom: 23px;
+
+      @media all and (max-width:$breakpoint4) {
+        font-size: 24px;
+      } 
+
+      &::after {
+        content: " ";
+        position: absolute; 
+        border: 13px solid transparent; 
+        border-left: 27px solid $gray-brown;
+        right: 20px;
+        top: 40px;
+
+        @media all and (max-width:$breakpoint3) {
+          right: 5px;
+          top: 20%;
+        } 
+      } 
+
+      &:hover {
+        color: $ligth-brown;
+
+        &::after {
+        border: 13px solid transparent; 
+        border-left: 27px solid $ligth-brown;
+        }
+      }
+
+     
+    }
+
+    p {
+      color: #303030;
+
+      @media all and (max-width:$breakpoint4) {
+        margin: 0;
+      } 
+    }
+  }
+}
+
